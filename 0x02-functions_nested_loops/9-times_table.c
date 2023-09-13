@@ -1,8 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-/**
- * times_table - function to print multiplication table 1 to 10
- */
 void times_table(void)
 {
 	int i;
