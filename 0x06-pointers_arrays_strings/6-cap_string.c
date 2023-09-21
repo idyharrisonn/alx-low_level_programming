@@ -4,25 +4,25 @@
  * @str: the string input
  * Return: str which is the modified string
  */
-char *cap_string(char *Str)
+char *cap_string(char *str)
 {
 	int i, j;
 
 	char c[] = {44, 59, 46, '!', '?', '"', '(', ')', '{', '}', ' ', '\t', '\n'};
 
-	for (i = 0; Str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (i == 0 && Str[i] >= 'a' && Str[i] <= 'z')
+		if (i == 0 && str[i] >= 'a' && str[i] <= 'z')
 		{
-			Str[i] = Str[i] - 32;
+			str[i] = str[i] - 32;
 		}
 		for (j = 0; c[j] != '\0'; j++)
 		{
-			if (c[j] == Str[i] && (Str[i + 1] >= 'a' && Str[i + 1] <= 'z'))
+			if (c[j] == str[i] && (str[i + 1] >= 'a' && str[i + 1] <= 'z'))
 			{
-				Str[i + 1] = Str[i + 1] - 32;
+				str[i + 1] = str[i + 1] - 32;
 			}
 		}
 	}
-	return (Str);
+	return (str);
 }
