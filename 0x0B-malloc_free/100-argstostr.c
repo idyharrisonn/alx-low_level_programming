@@ -10,6 +10,7 @@
  */
 char *argstostr(int ac, char **av)
 {
+	char *result;
 	int total_length = 0;
 	int index = 0;
 	int i;
@@ -23,7 +24,6 @@ char *argstostr(int ac, char **av)
 	{
 		total_length += strlen(av[i]) + 1;
 	}
-	char *result;
 
 	result = (char *)malloc(total_length + ac - 1);
 
