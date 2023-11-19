@@ -1,19 +1,20 @@
-#include <stdio.h>
 #include "main.h"
+#include <stddef.h>
+
 /**
-* _strchr - entry point
-* @s: input
-* @c: input
-* Return: always 0 (success)
-*/
+ * _strchr - Entry point
+ * @s: input
+ * @c: input
+ * Return: Always 0 (Success)
+ */
 char *_strchr(char *s, char c)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (; s[i] >= '\0'; i++)
 	{
-	if (s[i] == c)
-	return (s + i);
+		if (s[i] == c)
+			return (&s[i]);
 	}
-	return (NULL);
+	return (0);
 }
